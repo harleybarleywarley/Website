@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qian Ying's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -19,39 +19,49 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm Qian Ying, a media post-production student with a passion for video and photo editing.</p>
+    <section id="home" class="section">
+        <h1>Hello, I'm Qian Ying</h1>
+        <p>Media Post-Production Student with a Passion for Storytelling</p>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio">
+    <section id="portfolio" class="section">
         <h2>Portfolio</h2>
         <div class="portfolio-gallery">
-            <!-- Add project items here -->
+            <!-- Replace with actual project images and descriptions -->
             <div class="project-item">
                 <img src="project1.jpg" alt="Project 1">
-                <p>Project 1: Description of the project and your role.</p>
+                <p>Project 1: Video Editing Showcase</p>
             </div>
             <div class="project-item">
                 <img src="project2.jpg" alt="Project 2">
-                <p>Project 2: Description of the project and your role.</p>
+                <p>Project 2: Photography Portfolio</p>
             </div>
-            <!-- Add more projects as needed -->
         </div>
     </section>
 
     <!-- About Me Section -->
-    <section id="about">
+    <section id="about" class="section">
         <h2>About Me</h2>
-        <p>I'm currently studying Media Post Production at Ngee Ann Polytechnic. I’m experienced in customer service and am eager to gain hands-on experience in media production. This portfolio showcases my editing and creative projects.</p>
+        <p>I’m a Media Post-Production student at Ngee Ann Polytechnic. I specialize in video and photo editing and have experience in creating engaging media content.</p>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="section">
         <h2>Contact</h2>
-        <p>Feel free to reach out to me at <a href="mailto:qianyingloke@gmail.com">qianyingloke@gmail.com</a>.</p>
+        <p>Let's work together! Reach out at <a href="mailto:qianyingloke@gmail.com">qianyingloke@gmail.com</a>.</p>
     </section>
 
+    <!-- Smooth Scrolling Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
